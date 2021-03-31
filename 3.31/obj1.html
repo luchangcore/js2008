@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var obj1=new Object()
+    // console.log(Object.prototype);
+    
+    //获取obj的原型
+    var proto1=Object.getPrototypeOf(obj1);
+    //获取对象的数据类型
+//    console.log(typeof(proto1));
+//    console.log(proto1==Object.prototype)
+
+   function Preson(){
+   }
+   Preson.prototype.name="name";
+   function  Asian(){
+   }
+   Asian.prototype.location="Asian"
+  function China(){
+
+   }
+  China.prototype.color="蓝色";
+ //    console.log(p1);
+ //   console.log(Asian.prototype)
+ //   Asian.prototype=
+  //继承china
+  China.prototype=new Asian();
+  Asian.prototype=new Preson();
+  var p1=new Asian();
+  var p2=new China();
+//   console.log(p2,p1)
+
+
+ var obj1={}
+
+ function Preso(){
+
+ }
+//  var ns=new obj1()
+ //对象是没有原型
+//  console.log(obj1);
+//  console.log(Preso.prototype)
+  //获取对象的原型
+ var p=Object.getPrototypeOf(obj1);
+//  console.log(p)
+//引用数据类型值在内存里面只有一份
+
+//设置对象的原型
+
+var Pres={
+    name:"name",
+}
+var obj2={}
+// 把pres原型设置给obj1
+Object.setPrototypeOf(obj2,Pres);
+// console.log(obj2)
+
+//创建一个没有原型的对象
+// var obj3=Object.create(null)
+// console.log(obj3)
+
+
+var obj1={
+    name:"name",
+}
+//obj9继承了obj1原型
+var obj9=Object.create(obj1);
+// console.log(obj9)
+
+
+
+var obj5={
+    name:"孙鸡脖",
+}
+var obj6={
+
+}
+//获取obj6原型
+var po=Object.getPrototypeOf(obj6);
+// console.log(po)
+//判断是不是该对象的原型
+// console.log(po.isPrototypeOf(obj6));
+
+
+var objs={
+ name:"孙鱼",
+ age:11,
+}
+//返回一个数组
+// console.log(Object.getOwnPropertyNames(objs))
+//表明这个属性存在这个对象上
+console.log(objs.hasOwnPropertyt("name"))
+</script>
