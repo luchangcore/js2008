@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // function foo({x,y=5}) {
+    //     console.log(x,y)
+    // }
+    // foo({})
+    // foo({x:1})
+
+  //函数的参数默认值
+    // function log(x,y){
+    //     y=y||'word';
+    //     console.log(x,y);
+    // }
+    // log('Hellow');//hellow,word
+    // log('hellow','chai');//hellow chai
+    // log('hello','');//hello ,word
+
+   //判断y是否被赋值如果没有被赋值就默认值
+    // if(typeof y==='undefined'){
+    //     y='sss';
+    // }
+
+
+//ES6里面允许函数的参数设置默认值 在参数后面就可以修改
+    // function log(x='0',y='world'){
+    //     console.log(x,y);
+    // }
+    // log()
+
+    // function  Point(x=0,y=0){
+    //     this.x=x;
+    //     this.y=y;
+    // }
+    // const  p=new Point()
+    // console.log(p)
+    
+    // function  foo(x=5){
+        //在函数体中不能声明变量
+        // let x=1;//error
+        // const x=2;//error
+    // }
+    
+
+    // let x=99;
+    //  function  foo(p=x+1){
+        //  console.log(x)
+        //  console.log(p)
+    //  }
+    //  foo()
+     
+    //  x=100;
+    //  foo();
+
+
+    //与解构赋值默认值结合使用
+    // function  foo({x,y=5}){
+    //     console.log(x,y)
+    // }
+    // foo({})//undefined   5
+    // foo({x:222,y:333})
+    // foo();报错
+
+
+    // function  foo({x,y=5}={}){ 
+    //     console.log(x,y)
+    // }
+    // foo()
+
+
+    // function  fetch(url,{ body='',menth='GET',headers={}}){
+    //     console.log(menth)
+    // }
+    // fetch('http://examle.com',{});
+    // fetch('http://eample.com')
+
+
+    // function  add(e,...valu){`
+    //       console.log(e,
+          
+    //       valu);
+    // }
+    // add(222,33333,3331,1)、
+    
+//   let  obj1={a:1,b:null}
+//   let obj2={...obj1}
+//   console.log(obj2);
+
+//  setTimeout(function(){
+//      console.log(call.this);
+//  })
+
+
+for(var i=0;i<10;i++){
+    setTimeout(function(){
+        console.log(i);
+    },1000);
+}
+</script>
+</body>
+</html>
