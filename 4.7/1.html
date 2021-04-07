@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr1=[11,22,22,45];
+        function uniq(){
+            
+        }
+        uniq.prototype.uniq=function(){
+            for(var i=0;i<arr1.length;i++){
+                for(var j=i+1;j<arr1.length;j++){
+                    if(arr1[i]==arr1[j]){
+                        arr1.splice(j,1);
+                        // j--
+                    }
+                }
+            }
+            return  arr1
+        }; 
+         let sd=new uniq();
+         console.log(sd.uniq())
+
+    //给字符串的原型添加一个反转字符串的方法
+    // let str="abcd"
+    // function  re(){
+
+    // }
+    // re.prototype.rever=function(){
+    //   for(var i=0;i<str.length;i++){
+    //     let sort=str[i].index=i;
+    //       sort.sort()
+    //   }
+    //    return sort
+    // }
+    // let fz=new re();
+    // console.log(fz.rever())
+
+
+    
+    </script>
+</body>
+</html>

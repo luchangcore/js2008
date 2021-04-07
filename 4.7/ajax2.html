@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function  ajax(get,location){
+        //实例话
+        let xhr=new XMLHttpRequest();
+        //监听模式
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState==4&&xhr.status==200){
+                //接受php响应的数据
+                let  json_str=xhr.responseText;
+                let obj=JSON.parse(json_str);
+                
+            }
+        }
+        xhr.open(get,location);
+        xhr.send();
+    }
+    ajax("get","http://127.0.0.1/vue/month1/4.7/hello.php")
+</script>
