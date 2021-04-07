@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**
+        function  Person1(){
+        }
+        Person1.prototype.name="孙鱼"
+        Person1.prototype.age=23;
+        Person1.prototype.say=function(){
+            console.log("Haol")
+        }
+        var p1=new Person1();
+        console.log(p1.name);
+        p1.say()
+        **/
+
+     //ES6写法  类里面的都是方法
+        class  Person{
+            static loc="上海" 
+            //构造方法 实例话时自动调用
+          constructor(name,age,sex){
+           this.name=name
+           this.age=age
+           this.sex=sex
+          }
+
+          say(){
+              console.log(this.name,"正在说花")
+          }
+          static ciy(){
+              console.log("正在哭")
+          }
+          //访问器函数 访问name属性
+          get name(){
+              console.log("访问了name属性")
+          }
+         set name(v){
+             console.log("修改了内部属性值"+v)
+         }
+        }
+        let  p1=new Person("sunyang",10,"男");
+        let p2=new Person("si",11,"女");
+        // p1.name
+        // p2.name="王波";
+        // p1.say()
+        // p2.say()
+        // console.log(p1)
+        // console.log(p2)
+        //静态不用实例话  只通过类名访问的方法叫静态方法
+        // Person.ciy()
+        //访问类的静态属性
+        // console.log(Person.loc);
+
+    </script>
+</body>
+</html>
