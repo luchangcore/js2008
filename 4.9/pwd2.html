@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script src="../jquery-3.5.1.min.js"></script>
+<script>
+    //promise是一个对象用来处理异步请求的
+    new Promise(function(relove,sta){
+       $.ajax({
+           url:"http://vue.api.comcto.com/api/password1.php",
+           type:"get",
+           success:function(d){
+            //    console.log("第一位密码",d)
+               relove(d)
+           }
+       })
+    }).then(function(d){
+    // console.log("第一位的结果",d);
+    return new Promise(function(relove,sta){
+        $.ajax({
+            url:"http://vue.api.comcto.com/api/password2.php",
+            type:"get",
+            success:function(k){
+                // console.log("第二位密码",pa+k)
+                relove(k)//返回promise对象
+            }
+        })
+    })
+    }).then(function(k){
+    //  console.log("第二位密码结果",ka);
+      return  new Promise(function(relove,sta){
+      $.ajax({
+          url:"http://vue.api.comcto.com/api/password3.php",
+          type:"get",
+          success:function(h){
+            //   console.log("第三位密码",ka+h)
+              relove(h);
+          }
+      })
+      })
+    }).then(function(h){
+        // console.log("第三位密码结果",pd);
+        return new Promise(function(relove,sta){
+            $.ajax({
+                url:"http://vue.api.comcto.com/api/password4.php",
+                type:"get",
+                //成功
+                success:function(n){
+                    console.log("第四位密码",d+k)
+                }
+            })
+        })
+    })
+   
+    
+
+</script>

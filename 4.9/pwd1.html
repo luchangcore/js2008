@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script src="../jquery-3.5.1.min.js"></script>
+<script>
+    $.ajax({
+        url:"http://vue.api.comcto.com/api/password1.php",//要请求的接口地址1
+        type:"get",       //请求方法  get  post...
+        // dataType:"json",
+        success:function(d){    //请求成功之后的  处理函数
+            console.log("第一位密码",d)
+            $.ajax({
+        url:"http://vue.api.comcto.com/api/password2.php",//要请求的接口地址1
+        type:"get",       //请求方法  get  post...
+        // dataType:"json",
+        success:function(d){    //请求成功之后的  处理函数
+            console.log("第二位",d)
+            $.ajax({
+        url:"http://vue.api.comcto.com/api/password3.php",//要请求的接口地址1
+        type:"get",       //请求方法  get  post...
+        // dataType:"json",
+        success:function(d){    //请求成功之后的  处理函数
+            console.log("第三位",d)
+            $.ajax({
+        url:"http://vue.api.comcto.com/api/password4.php",//要请求的接口地址1
+        type:"get",       //请求方法  get  post...
+        // dataType:"json",
+        success:function(d){    //请求成功之后的  处理函数
+            console.log("第四位",d)
+        }
+    })
+        }
+    })
+        }
+    })
+      }
+    })
+  
+   
+</script>
