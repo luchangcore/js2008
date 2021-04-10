@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    class A {
+        
+    //实例化的时候自动调用构造方法
+        constructor(name="name",age=11) {
+             this.name=name;
+             this.age=age;
+        }
+       
+       //属性name的访问器  get访问方法
+        get name(){
+           console.log("访问了name属性")
+        }
+        set name(v){
+            console.log("name的新",v)
+        }
+    }
+    
+    const p1=new A("帅",111);
+    // const p2=new A("list",22);
+    const p2=new A();
+    // console.log(p1)
+    // console.log(p2)
+    // p2.name
+</script>

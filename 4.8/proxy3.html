@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    const obj={
+        name:"卢畅",
+        age:44
+    }
+    const p3=new Proxy(obj,{
+        deleteProperty(tar,pro){
+            if(pro in tar){
+                console.log(`你有权限删除${pro}`)
+            }else{
+                console.log(`你没有权限删除${pro}`)
+            }
+        }
+    });
+    // p3.;
+    delete p3.age;
+
+
+
+let sa=[1,3343,];
+//   let nu=new sa();
+  
+  console.log(sa.prototype)
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // Proxy(代理)
+    const obj={
+        name:"zhansan",
+        age:11
+    }
+    console.log(obj.name);
+
+    //设置自定义属性
+    Object.defineProperty(obj,"email",{
+        // value:"zhangsan",
+        // configurable:true,
+        // enumerable:true,
+        // writable:true,
+        ///读取时访问
+        get(){
+            return "访问了name属性"
+        },
+        //修改时访问
+        set(v){
+        //   return  `name的性值${v}`
+        return v
+        }
+    })
+    console.log(obj.name)
+    obj.name="孙老狗"
+    //默认情况下name是不可以修改的
+    console.log(obj)//age:11
+</script>

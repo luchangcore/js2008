@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    const obj1={
+        name:"摆弄",
+        age:11
+    }                   //参数2想要修改的
+    const p1=new Proxy(obj1,{
+        //()指操作的对象
+           //对象  属性名
+        get(target,propty){
+                      //属性名
+            // console.log(propty)
+            // console.log(target)
+            //判断访问的属性是否在对象中
+            if(propty in target){
+          console.log(`${propty}属性存在`)
+            }else{
+            console.log(`${propty}属性不存在`)
+            }
+        }
+    })
+     p1.name
+    //  p1.age
+     p1.sex
+</script>
