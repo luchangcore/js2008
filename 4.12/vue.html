@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="app">
+      <!-- 文本插值 -->
+   {{ msg }}
+
+   <!-- <input type="text" v-model=""> -->
+  </div>
+</body>
+</html>
+<script src="../vue v2.6.12.js"></script>
+<script>
+    const obj={
+        name:"kk"
+    }
+    obj["n"+"ame"]=11
+    // console.log(obj)
+</script>
+<script>
+  let app=new Vue({
+    el:".app",  ///容器ID  挂载点
+    data:{
+        msg:"hello word"
+    },
+  })
+//   console.log(app)
+
+</script>
+<script>
+  function *gen(x){
+    var y=yield x +2;
+    return y;
+  }
+  var g=gen(1);
+  let a=g.next();
+  // console.log(a)
+
+  var user=new Proxy({name:'lence','age':20},{
+    get:function(target,protype){
+      return 35;
+    }
+  })
+  console.log(user.age)
+</script>

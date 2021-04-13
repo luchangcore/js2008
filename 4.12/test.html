@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+    <input class="ja" type="text" v-model='ms'>+
+    <input class="jj" type="text" v-model='ms'>
+    <button v-on:click="dy">=</button>
+    <input type="text" id="ka">
+</div>
+</body>
+</html>
+<script src="../vue v2.6.12.js"></script>
+<script>
+   let ja=new Vue({
+       el:".ja",
+       data:{
+       ms:''
+       }
+   })
+   let jj=new Vue({
+       el:".jj",
+       data:{
+       ms:''
+       }
+   })
+  let dy=new Vue({
+      el:"button",
+      data:{
+       dy(){
+        let s= parseInt(ja.ms)+parseInt(jj.ms);
+        //   ka.innerText=s;
+        alert(1)
+       }
+      }
+  })
+    // let ka=new Vue({
+    //     el:"#ka",
+    //     data:{
+    //         ms:s
+    //     }
+    // })
+    
+</script>
+
+
+
+<script>
+    
+//    function
+</script>
